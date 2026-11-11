@@ -1,0 +1,114 @@
+/* commissarybitchinthekitch.com. Direction B + C (Dawn, 11 Nov): zine headline on a cinder-block wall,
+   then the commissary sheet. Light default, dark via prefers-color-scheme, print = black on white. */
+:root{
+  --bg:#fbf7f4; --wall:#f3ede7; --mortar:#e7ded6; --card:#f4eee9; --line:#ddd3cc;
+  --head:#4f2445; --text:#2b2228; --muted:#5b4c56; --accent:#4f2445;
+  --btn:#1c1b1d; --btn2:#2e2c2f; --btnedge:#1c1b1d; --btntext:#f4ede6;
+  --paper:#fffdfa; --paperink:#2b2228; --paperline:#b9ada4;
+  --display:'Archivo Black', Impact, sans-serif;
+  --chalk:'Permanent Marker', 'Marker Felt', cursive;
+  --body:'Josefin Sans', 'Avenir Next', system-ui, sans-serif;
+  --mono:'IBM Plex Mono', ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#2b2b2b; --wall:#2b2b2b; --mortar:#262626; --card:#353535; --line:#4a4a4a;
+    --head:#eee6dc; --text:#eee6dc; --muted:#c4bcb3; --accent:#D49066;
+    --btn:#1e1e1e; --btn2:#262626; --btnedge:#5a5a5a; --btntext:#eee6dc;
+    --paper:#f4ede3; --paperink:#2a2624; --paperline:#9a8f84;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:400 18px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1040px;margin:0 auto;padding-left:16px;padding-right:16px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:16px;top:8px;background:var(--btn);color:var(--btntext);padding:8px 12px;border-radius:8px;z-index:5}
+
+/* C: cinder-block wall */
+.wall{background-color:var(--wall);
+  background-image:linear-gradient(var(--mortar) 2px,transparent 2px),linear-gradient(90deg,var(--mortar) 2px,transparent 2px);
+  background-size:120px 60px;border-bottom:1px solid var(--line)}
+.hero{display:grid;gap:24px;padding-top:32px;padding-bottom:36px}
+.eyebrow{font:600 12px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.big{font:400 clamp(38px,10vw,72px)/.95 var(--display);text-transform:uppercase;color:var(--head);margin:0;letter-spacing:.005em;text-wrap:balance}
+.big em{font-style:normal;color:var(--accent)}
+.ttl{font:400 clamp(26px,6vw,36px)/1.1 var(--chalk);color:var(--head);margin:18px 0 2px}
+.by{color:var(--muted);margin:0 0 18px;font-size:17px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 8px}
+.btn{display:inline-block;text-decoration:none;font:600 14px/1.2 var(--body);letter-spacing:.08em;text-transform:uppercase;
+  padding:13px 20px;border-radius:999px;background:var(--btn2);color:var(--btntext);border:1px solid var(--btnedge)}
+.btn.main{background:var(--btn)}
+.btn.main::after{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#D49066;margin-left:10px;vertical-align:1px}
+.btn:hover{filter:brightness(1.18)}
+.small{color:var(--muted);font-size:15px;margin:0 0 16px}
+.stamp{display:inline-block;border:2px solid var(--accent);color:var(--accent);font:600 13px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;padding:7px 10px;transform:rotate(-3deg);background:var(--bg)}
+.cover{margin:0;justify-self:center;max-width:300px;width:100%}
+.cover img{border-radius:6px;box-shadow:0 10px 26px rgba(0,0,0,.28)}
+.cover figcaption{font:400 12px/1.4 var(--mono);color:var(--muted);margin-top:8px;text-align:center}
+
+/* B: the commissary sheet + Dawn's voice */
+.low{display:grid;gap:24px;padding-top:36px}
+.sheet{background:var(--paper);color:var(--paperink);border:1px solid var(--line);border-radius:4px;padding:18px 20px;font:400 15px/1.4 var(--mono);
+  transform:rotate(-1deg);box-shadow:0 8px 20px rgba(0,0,0,.18);max-width:460px}
+.sheet-h{font:400 26px/1 var(--display);margin:0 0 10px;color:var(--paperink)}
+.sheet ul{list-style:none;margin:0;padding:0}
+.sheet li{border-bottom:1px dotted var(--paperline);padding:6px 0}
+.sheet li span::before{content:"\2610";margin-right:10px}
+.tot{display:flex;justify-content:space-between;gap:10px;font-weight:600;margin:10px 0 2px}
+.sheet-note{margin:6px 0 0;font-size:13px;color:#5b534d}
+.q{margin:0 0 16px;border-left:3px solid var(--accent);background:var(--card);padding:14px 16px;border-radius:0 8px 8px 0}
+.q p{margin:0;font:600 21px/1.35 var(--body);color:var(--head)}
+.q footer{margin-top:8px;font:400 13px var(--mono);color:var(--muted);letter-spacing:.06em}
+.lede{font-size:19px;margin:0 0 18px}
+
+/* sections */
+.sec{margin-top:44px}
+h2{font:600 26px/1.2 var(--body);color:var(--head);margin:0 0 10px;letter-spacing:.01em}
+h3{font:600 19px/1.3 var(--body);color:var(--head);margin:18px 0 4px}
+.sec p{margin:0 0 12px}
+.ticks{list-style:none;padding:0;margin:0}
+.ticks li{padding:4px 0}
+.ticks li::before{content:"\2610";font-family:var(--mono);color:var(--accent);margin-right:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-top:12px}
+.qa .btns{margin-top:22px}
+.links{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.links a{display:block;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;color:var(--head);font-weight:600}
+.links a span{display:block;font:400 13px var(--mono);color:var(--muted);margin-top:4px}
+.links a:hover{border-color:var(--accent)}
+.foot{margin-top:48px;padding-top:18px;padding-bottom:36px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.foot p{margin:0 0 6px}
+.sig{font:400 22px var(--chalk);color:var(--accent);text-align:center;margin-top:18px!important}
+
+@media (min-width:760px){
+  .hero{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);align-items:center;gap:40px;padding-top:56px;padding-bottom:56px}
+  .low{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;gap:44px;padding-top:52px}
+  .sec{max-width:720px}
+  .links{grid-template-columns:1fr 1fr}
+  .more{max-width:none}
+}
+
+/* print: black on white for pages people print for those inside */
+@media print{
+  :root{--bg:#fff;--wall:#fff;--mortar:#fff;--card:#fff;--line:#999;--head:#000;--text:#000;--muted:#222;--accent:#000;
+    --btn:#fff;--btn2:#fff;--btnedge:#000;--btntext:#000;--paper:#fff;--paperink:#000;--paperline:#666}
+  body{font-size:12pt}
+  .wall{background-image:none;border-bottom:1px solid #999}
+  .hero{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);padding-top:0;padding-bottom:16px}
+  .big{font-size:38pt}
+  .cover{max-width:2.4in}
+  .cover img,.sheet{box-shadow:none}
+  .sheet{transform:none}
+  .stamp{transform:none}
+  .btn.main::after{content:" (" attr(href) ")";display:inline;width:auto;height:auto;background:none;border-radius:0;margin:0;vertical-align:baseline}
+  .low{grid-template-columns:1fr 1fr;padding-top:16px}
+  .sheet-note{color:#000}
+  .skip{display:none}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:9pt;font-weight:400;text-transform:none;letter-spacing:0}
+  .links a span{display:none}
+  .sec,.low{break-inside:avoid}
+}
+@media (prefers-reduced-motion:no-preference){.btn,.links a{transition:filter .15s,border-color .15s}}
