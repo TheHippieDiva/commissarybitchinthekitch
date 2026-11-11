@@ -126,3 +126,11 @@ h3{font:600 19px/1.3 var(--body);color:var(--head);margin:18px 0 4px}
 .sec .card,.sec .note,.sec blockquote,.sec aside{background:#ebe3d6!important;color:var(--paperink)!important;border-color:var(--paperline)!important}
 .sec .card *,.sec .note *,.sec aside *{color:var(--paperink)!important}
 .sec a.btn{color:var(--btntext)!important}
+/* lift the words + book off the grid */
+.wall .big,.wall .eyebrow,.wall h1,.wall .byline,.wall .chalk,.wall p{text-shadow:0 2px 10px rgba(0,0,0,.18),0 1px 2px rgba(0,0,0,.12)}
+.wall img{box-shadow:0 18px 40px rgba(0,0,0,.35),0 4px 10px rgba(0,0,0,.25)}
+@media (prefers-color-scheme: dark){
+  .wall .big,.wall .eyebrow,.wall h1,.wall .byline,.wall .chalk,.wall p{text-shadow:0 3px 14px rgba(0,0,0,.7),0 1px 3px rgba(0,0,0,.6)}
+  .wall img{box-shadow:0 20px 48px rgba(0,0,0,.7),0 6px 14px rgba(0,0,0,.55)}
+}
+@media print{.wall *{text-shadow:none!important;box-shadow:none!important}}
