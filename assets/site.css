@@ -1,11 +1,10 @@
 /* commissarybitchinthekitch.com. Direction B + C (Dawn, 11 Nov): zine headline on a cinder-block wall,
    then the commissary sheet. Light default, dark via prefers-color-scheme, print = black on white. */
 :root{
-  color-scheme:light dark;
-  --bg:#fbf7f4; --wall:#f3ede7; --mortar:#e7ded6; --card:#f4eee9; --line:#ddd3cc;
-  --head:#4f2445; --text:#2b2228; --muted:#5b4c56; --accent:#4f2445;
-  --btn:#1c1b1d; --btn2:#2e2c2f; --btnedge:#1c1b1d; --btntext:#f4ede6;
-  --paper:#fffdfa; --paperink:#2b2228; --paperline:#b9ada4;
+  --bg:#f1f1f1; --wall:#d9dbdc; --mortar:#c3c6c8; --card:#ffffff; --line:#cfd2d4;
+  --head:#2b2b2b; --text:#2b2b2b; --muted:#555759; --accent:#b8693d;
+  --btn:#1c1c1c; --btn2:#2e2e2e; --btnedge:#1c1c1c; --btntext:#f4f4f4;
+  --paper:#f7f2ea; --paperink:#2b2b2b; --paperline:#b9b4ac;
   --display:'Archivo Black', Impact, sans-serif;
   --chalk:'Permanent Marker', 'Marker Felt', cursive;
   --body:'Josefin Sans', 'Avenir Next', system-ui, sans-serif;
@@ -13,7 +12,7 @@
 }
 @media (prefers-color-scheme: dark){
   :root{
-    --bg:#2b2b2b; --wall:#2b2b2b; --mortar:#262626; --card:#353535; --line:#4a4a4a;
+    --bg:#2b2c2d; --wall:#303234; --mortar:#3b3e41; --card:#36383a; --line:#4a4d50;
     --head:#eee6dc; --text:#eee6dc; --muted:#c4bcb3; --accent:#D49066;
     --btn:#1e1e1e; --btn2:#262626; --btnedge:#5a5a5a; --btntext:#eee6dc;
     --paper:#f4ede3; --paperink:#2a2624; --paperline:#9a8f84;
@@ -35,7 +34,7 @@ img{max-width:100%;height:auto;display:block}
   background-size:120px 60px;border-bottom:1px solid var(--line)}
 .hero{display:grid;gap:24px;padding-top:32px;padding-bottom:36px}
 .eyebrow{font:600 12px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
-.big{font:400 clamp(38px,10vw,72px)/.95 var(--display);text-transform:uppercase;color:var(--head);margin:0;letter-spacing:.005em;text-wrap:balance}
+.big{font:400 clamp(46px,11vw,92px)/.95 'Anton',Impact,var(--display);text-transform:uppercase;color:var(--head);margin:0;letter-spacing:.005em;text-wrap:balance}
 .big em{font-style:normal;color:var(--accent)}
 .ttl{font:400 clamp(26px,6vw,36px)/1.1 var(--chalk);color:var(--head);margin:18px 0 2px}
 .by{color:var(--muted);margin:0 0 18px;font-size:17px}
@@ -113,3 +112,17 @@ h3{font:600 19px/1.3 var(--body);color:var(--head);margin:18px 0 4px}
   .sec,.low{break-inside:avoid}
 }
 @media (prefers-reduced-motion:no-preference){.btn,.links a{transition:filter .15s,border-color .15s}}
+
+/* Dawn 11 Nov: cell-block header + text on commissary sheets */
+.sec{background:var(--paper);color:var(--paperink);border-radius:4px;padding:22px 24px 14px;box-shadow:0 6px 18px rgba(0,0,0,.18);max-width:780px}
+.sec:nth-of-type(odd){transform:rotate(-.35deg)}
+.sec:nth-of-type(even){transform:rotate(.3deg)}
+.sec h2{font:400 30px/1.05 'Anton',Impact,var(--display);color:var(--paperink);letter-spacing:.01em;border-bottom:1px dashed var(--paperline);padding-bottom:8px;margin-bottom:12px}
+.sec a{color:#a85a2f}
+.sec .muted,.sec small{color:#5a5651}
+@media (prefers-color-scheme: dark){.sec{box-shadow:0 8px 22px rgba(0,0,0,.45)}}
+@media print{.sec{transform:none!important;box-shadow:none!important;background:#fff!important;border:1px solid #999}.sec h2{color:#000}}
+.sec h3,.sec dt,.sec strong,.sec b,.sec .q{color:var(--paperink)!important}
+.sec .card,.sec .note,.sec blockquote,.sec aside{background:#ebe3d6!important;color:var(--paperink)!important;border-color:var(--paperline)!important}
+.sec .card *,.sec .note *,.sec aside *{color:var(--paperink)!important}
+.sec a.btn{color:var(--btntext)!important}
