@@ -1,6 +1,7 @@
 /* commissarybitchinthekitch.com. Direction B + C (Dawn, 11 Nov): zine headline on a cinder-block wall,
    then the commissary sheet. Light default, dark via prefers-color-scheme, print = black on white. */
 :root{
+  color-scheme:light dark;
   --bg:#fbf7f4; --wall:#f3ede7; --mortar:#e7ded6; --card:#f4eee9; --line:#ddd3cc;
   --head:#4f2445; --text:#2b2228; --muted:#5b4c56; --accent:#4f2445;
   --btn:#1c1b1d; --btn2:#2e2c2f; --btnedge:#1c1b1d; --btntext:#f4ede6;
