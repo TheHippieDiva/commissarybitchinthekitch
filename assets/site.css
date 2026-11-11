@@ -1,7 +1,7 @@
 /* commissarybitchinthekitch.com. Direction B + C (Dawn, 11 Nov): zine headline on a cinder-block wall,
    then the commissary sheet. Light default, dark via prefers-color-scheme, print = black on white. */
 :root{
-  --bg:#f1f1f1; --wall:#d9dbdc; --mortar:#c3c6c8; --card:#ffffff; --line:#cfd2d4;
+  --bg:#f1f1f1; --wall:#dcdedf; --mortar:#d1d4d6; --card:#ffffff; --line:#cfd2d4;
   --head:#2b2b2b; --text:#2b2b2b; --muted:#555759; --accent:#b8693d;
   --btn:#1c1c1c; --btn2:#2e2e2e; --btnedge:#1c1c1c; --btntext:#f4f4f4;
   --paper:#f7f2ea; --paperink:#2b2b2b; --paperline:#b9b4ac;
@@ -12,7 +12,7 @@
 }
 @media (prefers-color-scheme: dark){
   :root{
-    --bg:#2b2c2d; --wall:#303234; --mortar:#3b3e41; --card:#36383a; --line:#4a4d50;
+    --bg:#2b2c2d; --wall:#303234; --mortar:#363a3d; --card:#36383a; --line:#4a4d50;
     --head:#eee6dc; --text:#eee6dc; --muted:#c4bcb3; --accent:#D49066;
     --btn:#1e1e1e; --btn2:#262626; --btnedge:#5a5a5a; --btntext:#eee6dc;
     --paper:#f4ede3; --paperink:#2a2624; --paperline:#9a8f84;
@@ -30,7 +30,7 @@ img{max-width:100%;height:auto;display:block}
 
 /* C: cinder-block wall */
 .wall{background-color:var(--wall);
-  background-image:linear-gradient(var(--mortar) 2px,transparent 2px),linear-gradient(90deg,var(--mortar) 2px,transparent 2px);
+  background-image:linear-gradient(var(--mortar) 1px,transparent 1px),linear-gradient(90deg,var(--mortar) 1px,transparent 1px);
   background-size:120px 60px;border-bottom:1px solid var(--line)}
 .hero{display:grid;gap:24px;padding-top:32px;padding-bottom:36px}
 .eyebrow{font:600 12px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
